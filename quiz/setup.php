@@ -13,7 +13,8 @@ if ($_POST) {
     'question_count' => (int)($_POST['question_count'] ?? 5)
   ];
   error_log("[DEBUG setup] SID=".session_id()." quiz_settings=".json_encode($_SESSION['quiz_settings']));
-  header("Location: play.php");
+  // Use absolute path redirect to ensure it works
+  header("Location: " . $_SERVER['REQUEST_URI'] . "/../play.php");
   exit;
 }
 ?>
