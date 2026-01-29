@@ -1,0 +1,165 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* THEME */
+:root {
+  --primary: #4f46e5;
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --text: #0f172a;
+  --muted: #64748b;
+  --success: #22c55e;
+  --danger: #ef4444;
+}
+
+body {
+  font-family: Inter, system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* LAYOUT */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+/* NAVBAR */
+.nav {
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 14px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+/* CARDS */
+.card {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.05);
+}
+
+/* BUTTONS */
+.btn {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn.secondary {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+/* AUTH */
+.auth-box {
+  width: 380px;
+  margin: 100px auto;
+}
+
+/* QUIZ */
+.option {
+  border: 2px solid #e5e7eb;
+  padding: 16px 18px;
+  border-radius: 12px;
+  margin-bottom: 14px;
+  cursor: pointer;
+  background: #fff;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.option:hover {
+  border-color: #cbd5e1;
+  background: #f1f5f9;
+  transform: translateX(2px);
+}
+
+.option.active {
+  border-color: var(--primary);
+  background: #eef2ff;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.option strong {
+  margin-right: 12px;
+  font-weight: 700;
+  color: var(--text);
+  min-width: 30px;
+}
+
+/* SELECTION BUTTONS */
+.selection-group {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.selection-btn {
+  flex: 1;
+  min-width: 120px;
+  padding: 16px 20px;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  background: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.selection-btn:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.selection-btn.active {
+  background: #4f46e5;
+  color: #fff;
+  border-color: #4f46e5;
+  box-shadow: 0 8px 16px rgba(79, 70, 229, 0.3);
+  transform: translateY(-4px);
+}
+
+/* TIMER */
+.timer {
+  color: var(--danger);
+  font-weight: 700;
+}
+
+/* PROGRESS */
+.progress {
+  height: 6px;
+  background: #e5e7eb;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.progress div {
+  height: 100%;
+  background: var(--success);
+}

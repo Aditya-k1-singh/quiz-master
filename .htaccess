@@ -1,0 +1,12 @@
+RewriteEngine On
+
+# Force index.php as entry point
+DirectoryIndex index.php
+
+# Disable directory listing
+Options -Indexes
+
+# Pretty URLs (optional future use)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [L]
