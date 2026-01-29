@@ -53,6 +53,19 @@ $progressPercent = (($currentIndex + 1) / $totalQuestions) * 100;
   <meta charset="UTF-8">
   <title>Quiz</title>
   <link rel="stylesheet" href="../assets/style.css">
+  <style>
+    .debug-banner {
+      background: #fef3c7;
+      border: 1px solid #f59e0b;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 4px;
+      font-size: 12px;
+      color: #78350f;
+      font-family: monospace;
+      white-space: pre-wrap;
+    }
+  </style>
 </head>
 <body>
 
@@ -71,6 +84,9 @@ $progressPercent = (($currentIndex + 1) / $totalQuestions) * 100;
 
 <!-- QUIZ CONTAINER -->
 <div class="container">
+  <div class="debug-banner">🐛 DEBUG: SID=<?= session_id() ?>
+quiz_settings=<?= json_encode($_SESSION['quiz_settings'] ?? 'NOT SET') ?>
+questions=<?= isset($_SESSION['quiz_questions']) ? count($_SESSION['quiz_questions']) . ' cached' : 'NOT SET' ?></div>
 
   <!-- PROGRESS -->
   <div class="progress" style="margin-bottom:20px">

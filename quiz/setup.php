@@ -22,10 +22,25 @@ if ($_POST) {
 <head>
   <title>Quiz Setup</title>
   <link rel="stylesheet" href="../assets/style.css">
+  <style>
+    .debug-banner {
+      background: #fef3c7;
+      border: 1px solid #f59e0b;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 4px;
+      font-size: 12px;
+      color: #78350f;
+      font-family: monospace;
+      white-space: pre-wrap;
+    }
+  </style>
 </head>
 <body>
 
 <div class="container">
+  <div class="debug-banner">🐛 DEBUG: SID=<?= session_id() ?>
+quiz_settings=<?= json_encode($_SESSION['quiz_settings'] ?? 'NOT SET') ?></div>
   <div class="card" style="max-width: 600px; margin: auto;">
     <h2 style="margin-bottom: 30px;">Quiz Setup</h2>
 
