@@ -12,6 +12,7 @@ if ($_POST) {
     'difficulty' => $_POST['difficulty'],
     'question_count' => (int)($_POST['question_count'] ?? 5)
   ];
+  error_log("[DEBUG setup] SID=".session_id()." quiz_settings=".json_encode($_SESSION['quiz_settings']));
   header("Location: play.php");
   exit;
 }

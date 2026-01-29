@@ -22,6 +22,9 @@ $category = $_SESSION['quiz_settings']['category'];
 $difficulty = $_SESSION['quiz_settings']['difficulty'];
 $questionCount = $_SESSION['quiz_settings']['question_count'] ?? 5;
 
+// Log incoming session and quiz_settings for debugging
+error_log("[DEBUG play] SID=".session_id()." has_quiz_settings=".(isset($_SESSION['quiz_settings'])?1:0)." quiz_settings=".json_encode($_SESSION['quiz_settings'] ?? []));
+
 // Fetch questions from database if not already cached
 if (!isset($_SESSION['quiz_questions']) || empty($_SESSION['quiz_questions'])) {
   $questions = fetchQuestionsFromDatabase($pdo, $category, $difficulty, $questionCount);
