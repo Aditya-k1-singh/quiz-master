@@ -2,7 +2,7 @@
 session_start();
 
 if (!isset($_SESSION['result'])) {
-  header("Location: /dashboard/index.php");
+  header("Location: ../dashboard/index.php");
   exit;
 }
 
